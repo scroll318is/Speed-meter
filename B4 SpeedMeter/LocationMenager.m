@@ -58,6 +58,7 @@
         CLLocation *lastLocation = (CLLocation *)[locations lastObject];
         [self.delegate didUpdateLocation:lastLocation];
     }
+    
 }
 
 - (void)locationManager:(CLLocationManager *)manager

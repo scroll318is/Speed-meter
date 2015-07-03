@@ -300,7 +300,7 @@
     </scenes>
     <resources>
         <image name="Audi_front" width="511" height="288"/>
-        <image name="compass" width="300" height="289"/>
+        <image name="compass" width="80" height="80"/>
         <image name="wrench" width="75" height="75"/>
     </resources>
 </document>
