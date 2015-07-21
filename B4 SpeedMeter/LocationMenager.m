@@ -40,10 +40,16 @@
 
 #pragma mark - Public
 
-- (void)start {
+- (void)start
+{
     [self.locationManager requestWhenInUseAuthorization];
 }
 
+- (void)stop
+{
+    [self.locationManager stopUpdatingLocation];
+    [self.locationManager stopUpdatingHeading];
+}
 #pragma mark - CLLocationManagerDelegate
 
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {

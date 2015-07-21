@@ -17,5 +17,6 @@
 @interface LocationMenager : NSObject
 + (instancetype)sharedInstance;
 - (void)start;
+- (void)stop;
 @property (weak, nonatomic) id <LocationMenagerCustomDelegate> delegate;
 @end

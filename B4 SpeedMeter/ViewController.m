@@ -36,8 +36,8 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (void)viewDidLoad
+{   [super viewDidLoad];
     self.speedLabel.textColor = [UIColor redColor];
     [self.locationMenager start];
     self.lanLotView.layer.cornerRadius = 3.0f;
@@ -59,7 +59,8 @@
     }
 }
 
--(void)viewDidLayoutSubviews {
+- (void)viewDidLayoutSubviews
+{   [super viewDidLayoutSubviews];
     if ([UIDevice currentDevice].orientation == UIDeviceOrientationPortraitUpsideDown) {
         return;
     }
@@ -70,6 +71,11 @@
         [self.speedUnitLabel setTextColor:[UIColor blackColor]];
         self.image.image = [UIImage imageNamed:@"Audi_front"];
     }
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{   [super viewDidDisappear:animated];
+    [self.locationMenager stop];
 }
 
 #pragma mark - Getters

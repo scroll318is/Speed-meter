@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -62,11 +62,11 @@
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ig8-BL-XF7">
-                                        <rect key="frame" x="47" y="1" width="1" height="16"/>
+                                        <rect key="frame" x="44.5" y="1" width="2" height="10"/>
                                         <color key="backgroundColor" red="1" green="0.17978773119999999" blue="0.1172223976" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="1" id="CIj-7G-nbv"/>
-                                            <constraint firstAttribute="height" constant="16" id="Mgg-oo-5Gd"/>
+                                            <constraint firstAttribute="width" constant="2" id="CIj-7G-nbv"/>
+                                            <constraint firstAttribute="height" constant="10" id="Mgg-oo-5Gd"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-000°" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jm8-jD-Amz">
@@ -139,7 +139,7 @@
                                     <constraint firstItem="CC0-X4-f2z" firstAttribute="top" secondItem="FfA-xt-oN1" secondAttribute="top" constant="15" id="aKA-KC-cJn"/>
                                     <constraint firstItem="1f9-CB-gCX" firstAttribute="top" secondItem="CC0-X4-f2z" secondAttribute="bottom" constant="17" id="b1m-j5-Ifb"/>
                                     <constraint firstItem="Iz2-05-Sqa" firstAttribute="leading" secondItem="FfA-xt-oN1" secondAttribute="leading" constant="8" id="beX-pI-BrE"/>
-                                    <constraint firstItem="ig8-BL-XF7" firstAttribute="centerX" secondItem="Iz2-05-Sqa" secondAttribute="centerX" constant="2" id="eXE-AE-ncg"/>
+                                    <constraint firstItem="ig8-BL-XF7" firstAttribute="centerX" secondItem="Iz2-05-Sqa" secondAttribute="centerX" id="eXE-AE-ncg"/>
                                     <constraint firstAttribute="trailing" secondItem="SmQ-gJ-8u9" secondAttribute="trailing" constant="182" id="f1L-hz-7KK"/>
                                     <constraint firstItem="rxj-Rd-f86" firstAttribute="leading" secondItem="CC0-X4-f2z" secondAttribute="trailing" constant="5" id="ged-3O-W7H"/>
                                     <constraint firstAttribute="trailing" secondItem="rxj-Rd-f86" secondAttribute="trailing" constant="10" id="gou-Zp-MF6"/>
@@ -300,7 +300,7 @@
     </scenes>
     <resources>
         <image name="Audi_front" width="511" height="288"/>
-        <image name="compass" width="80" height="80"/>
+        <image name="compass" width="100" height="100"/>
         <image name="wrench" width="75" height="75"/>
     </resources>
 </document>
