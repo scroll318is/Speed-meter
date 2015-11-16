@@ -75,6 +75,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B70D188F1BFA245B00345177 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B7C7E0931B416E150050FA75 /* ViewController.h */,
+				B7C7E0941B416E150050FA75 /* ViewController.m */,
+				B79821CE1B43EB5B00326E4A /* SettingsVC.h */,
+				B79821CF1B43EB5B00326E4A /* SettingsVC.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		B70D18901BFA247D00345177 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B7B2C9881B41D9AE00E300BA /* LocationMenager.h */,
+				B7B2C9891B41D9AE00E300BA /* LocationMenager.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		B7C7E0801B416E150050FA75 = {
 			isa = PBXGroup;
 			children = (
@@ -96,12 +116,8 @@
 		B7C7E08B1B416E150050FA75 /* B4 SpeedMeter */ = {
 			isa = PBXGroup;
 			children = (
-				B7C7E0931B416E150050FA75 /* ViewController.h */,
-				B7C7E0941B416E150050FA75 /* ViewController.m */,
-				B79821CE1B43EB5B00326E4A /* SettingsVC.h */,
-				B79821CF1B43EB5B00326E4A /* SettingsVC.m */,
-				B7B2C9881B41D9AE00E300BA /* LocationMenager.h */,
-				B7B2C9891B41D9AE00E300BA /* LocationMenager.m */,
+				B70D18901BFA247D00345177 /* Model */,
+				B70D188F1BFA245B00345177 /* Controller */,
 				B7C7E0961B416E150050FA75 /* Main.storyboard */,
 				B7C7E08C1B416E150050FA75 /* Supporting Files */,
 			);
@@ -185,7 +201,7 @@
 		B7C7E0811B416E150050FA75 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = com.kostov;
 				TargetAttributes = {
 					B7C7E0881B416E150050FA75 = {
@@ -322,6 +338,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -337,7 +354,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -375,7 +392,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -391,6 +408,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "B4 SpeedMeter/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kostov.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -404,6 +422,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "B4 SpeedMeter/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kostov.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -413,17 +432,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "B4 SpeedMeterTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kostov.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos9.1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/B4 SpeedMeter.app/B4 SpeedMeter";
 			};
 			name = Debug;
@@ -432,13 +450,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "B4 SpeedMeterTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kostov.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos9.1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/B4 SpeedMeter.app/B4 SpeedMeter";
 			};
 			name = Release;
