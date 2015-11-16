@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@protocol AppDelegateDelegate <NSObject>
+- (void)willResignActive;
+- (void)didBecomeActive;
+@end
 
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@property (weak, nonatomic) id <AppDelegateDelegate> delegate;
 @property (strong, nonatomic) UIWindow *window;
 
 

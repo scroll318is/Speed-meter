@@ -29,13 +29,13 @@
 #pragma mark - Actions
 
 - (IBAction)onDegreesSwitchValueChanged:(UISwitch *)sender {
-    if (self.delegate) {
+    if ([self.delegate respondsToSelector:@selector(degreesValueChanged:)]) {
         [self.delegate degreesValueChanged:sender.isOn];
     }
 }
 
 - (IBAction)speedUnitChanged:(UISwitch *)sender {
-    if (self.delegate) {
+    if ([self.delegate respondsToSelector:@selector(speedUnitValueChanged:)]) {
         [self.delegate speedUnitValueChanged:sender.isOn];
     }
 }

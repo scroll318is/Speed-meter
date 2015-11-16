@@ -14,16 +14,20 @@
 
 @implementation LocationMenager
 // singleton
-+ (instancetype)sharedInstance {
++ (instancetype)sharedInstance
+{
     static LocationMenager *sharedInstance = nil;
     static dispatch_once_t onceToken;
+    
     dispatch_once(&onceToken, ^{
         sharedInstance = [LocationMenager new];
     });
+    
     return sharedInstance;
 }
 
-- (instancetype)init{
+- (instancetype)init
+{
     self = [super init];
     return self;
 }
@@ -45,6 +49,12 @@
     [self.locationManager requestWhenInUseAuthorization];
 }
 
+- (void)reset
+{
+    [self.locationManager startUpdatingLocation];
+    [self.locationManager startUpdatingHeading];
+}
+
 - (void)stop
 {
     [self.locationManager stopUpdatingLocation];
@@ -52,15 +62,16 @@
 }
 #pragma mark - CLLocationManagerDelegate
 
-- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
+{
     if (status == kCLAuthorizationStatusAuthorizedWhenInUse) {
-        [self.locationManager startUpdatingLocation];
-        [self.locationManager startUpdatingHeading];
+        [self reset];
     }
 }
 
-- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
-    if (self.delegate) {
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    if ([self.delegate respondsToSelector:@selector(didUpdateLocation:)]) {
         CLLocation *lastLocation = (CLLocation *)[locations lastObject];
         [self.delegate didUpdateLocation:lastLocation];
     }
@@ -71,7 +82,7 @@
         didUpdateHeading:(CLHeading *)newHeading{
     float heading = newHeading.trueHeading; //in degrees
     float headingDegrees = -(heading*M_PI/180); //assuming needle points to top of iphone.
-    if (self.delegate) {
+    if ([self.delegate respondsToSelector:@selector(didUpdateHeadingWithNewRotationAngle:)]) {
         [self.delegate didUpdateHeadingWithNewRotationAngle:headingDegrees];
     }
 }

@@ -1,0 +1,26 @@
+/* Class = "UILabel"; text = "DMS"; ObjectID = "CFb-jC-qBt"; */
+"CFb-jC-qBt.text" = "ГМС";
+
+/* Class = "UINavigationItem"; title = "Settings"; ObjectID = "N6B-0U-p5u"; */
+"N6B-0U-p5u.title" = "Настройки";
+
+/* Class = "UILabel"; text = "lon:"; ObjectID = "SmQ-gJ-8u9"; */
+"SmQ-gJ-8u9.text" = "дъл:";
+
+/* Class = "UILabel"; text = "B4 Speed Meter"; ObjectID = "YE7-Q2-k3g"; */
+"YE7-Q2-k3g.text" = "Б4 Километраж";
+
+/* Class = "UILabel"; text = "Degrees"; ObjectID = "YPQ-dQ-vSa"; */
+"YPQ-dQ-vSa.text" = "Градуси";
+
+/* Class = "UILabel"; text = "km/h"; ObjectID = "knI-Fz-loN"; */
+"knI-Fz-loN.text" = "км/ч";
+
+/* Class = "UILabel"; text = "lat:"; ObjectID = "o1C-Xg-ujj"; */
+"o1C-Xg-ujj.text" = "шир:";
+
+/* Class = "UILabel"; text = "km/h"; ObjectID = "p5L-j7-DgM"; */
+"p5L-j7-DgM.text" = "км/ч";
+
+/* Class = "UILabel"; text = "mp/h"; ObjectID = "uqE-eG-9oE"; */
+"uqE-eG-9oE.text" = "м/ч";

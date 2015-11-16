@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B79821D01B43EB5B00326E4A /* SettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B79821CF1B43EB5B00326E4A /* SettingsVC.m */; };
+		B7AACA631B67B23F0042F325 /* B4StringsTable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B7AACA651B67B23F0042F325 /* B4StringsTable.strings */; };
+		B7AACA681B67B4590042F325 /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7AACA671B67B4590042F325 /* Property List.plist */; };
 		B7B2C98A1B41D9AE00E300BA /* LocationMenager.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B2C9891B41D9AE00E300BA /* LocationMenager.m */; };
 		B7C7E08F1B416E150050FA75 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C7E08E1B416E150050FA75 /* main.m */; };
 		B7C7E0921B416E150050FA75 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C7E0911B416E150050FA75 /* AppDelegate.m */; };
@@ -32,6 +34,10 @@
 /* Begin PBXFileReference section */
 		B79821CE1B43EB5B00326E4A /* SettingsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsVC.h; sourceTree = "<group>"; };
 		B79821CF1B43EB5B00326E4A /* SettingsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsVC.m; sourceTree = "<group>"; };
+		B7AACA601B67A7920042F325 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/Main.strings; sourceTree = "<group>"; };
+		B7AACA641B67B23F0042F325 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/B4StringsTable.strings; sourceTree = "<group>"; };
+		B7AACA661B67B2950042F325 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/B4StringsTable.strings; sourceTree = "<group>"; };
+		B7AACA671B67B4590042F325 /* Property List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
 		B7B2C9881B41D9AE00E300BA /* LocationMenager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationMenager.h; sourceTree = "<group>"; };
 		B7B2C9891B41D9AE00E300BA /* LocationMenager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationMenager.m; sourceTree = "<group>"; };
 		B7C7E0891B416E150050FA75 /* B4 SpeedMeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "B4 SpeedMeter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,11 +98,11 @@
 			children = (
 				B7C7E0931B416E150050FA75 /* ViewController.h */,
 				B7C7E0941B416E150050FA75 /* ViewController.m */,
-				B7C7E0961B416E150050FA75 /* Main.storyboard */,
 				B79821CE1B43EB5B00326E4A /* SettingsVC.h */,
 				B79821CF1B43EB5B00326E4A /* SettingsVC.m */,
 				B7B2C9881B41D9AE00E300BA /* LocationMenager.h */,
 				B7B2C9891B41D9AE00E300BA /* LocationMenager.m */,
+				B7C7E0961B416E150050FA75 /* Main.storyboard */,
 				B7C7E08C1B416E150050FA75 /* Supporting Files */,
 			);
 			path = "B4 SpeedMeter";
@@ -105,6 +111,8 @@
 		B7C7E08C1B416E150050FA75 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B7AACA651B67B23F0042F325 /* B4StringsTable.strings */,
+				B7AACA671B67B4590042F325 /* Property List.plist */,
 				B7C7E0B21B416E3C0050FA75 /* CoreLocation.framework */,
 				B7C7E09B1B416E150050FA75 /* LaunchScreen.xib */,
 				B7C7E0991B416E150050FA75 /* Images.xcassets */,
@@ -182,6 +190,7 @@
 				TargetAttributes = {
 					B7C7E0881B416E150050FA75 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 47KQE9A93N;
 					};
 					B7C7E0A11B416E150050FA75 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -196,6 +205,7 @@
 			knownRegions = (
 				en,
 				Base,
+				bg,
 			);
 			mainGroup = B7C7E0801B416E150050FA75;
 			productRefGroup = B7C7E08A1B416E150050FA75 /* Products */;
@@ -215,6 +225,8 @@
 			files = (
 				B7C7E0981B416E150050FA75 /* Main.storyboard in Resources */,
 				B7C7E09D1B416E150050FA75 /* LaunchScreen.xib in Resources */,
+				B7AACA631B67B23F0042F325 /* B4StringsTable.strings in Resources */,
+				B7AACA681B67B4590042F325 /* Property List.plist in Resources */,
 				B7C7E09A1B416E150050FA75 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,10 +272,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		B7AACA651B67B23F0042F325 /* B4StringsTable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7AACA641B67B23F0042F325 /* Base */,
+				B7AACA661B67B2950042F325 /* bg */,
+			);
+			name = B4StringsTable.strings;
+			sourceTree = "<group>";
+		};
 		B7C7E0961B416E150050FA75 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B7C7E0971B416E150050FA75 /* Base */,
+				B7AACA601B67A7920042F325 /* bg */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -365,9 +387,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "B4 SpeedMeter/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -375,9 +400,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "B4 SpeedMeter/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
